@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>С лёгким паром — баня на дровах в Уфе</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Демо-концепт сайта бани «С лёгким паром»: русская и финская парная на дровах, купель и пармастера. Уфа, ул. Сун-Ят-Сена, 53А, ежедневно с 09:00 до 01:00.">
+<meta name="theme-color" content="#241a14">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="С лёгким паром — баня на дровах в Уфе">
+<meta property="og:description" content="Демо-концепт сайта: цены на бани, фото, отзывы гостей, адрес и звонок в одно касание.">
+<meta property="og:image" content="https://avatars.mds.yandex.net/get-altay/4547379/2a000001792caf1be7273f68c8f3690cf2e7/XXL">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23241a14'/%3E%3Cpath d='M11 15c-2-2.5 2-4.5 0-8M16 15c-2-2.5 2-4.5 0-8M21 15c-2-2.5 2-4.5 0-8' fill='none' stroke='%23f5ede2' stroke-width='2' stroke-linecap='round'/%3E%3Cellipse cx='16' cy='23.5' rx='9' ry='4.8' fill='%23f2a24a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Prata&display=swap" media="print" onload="this.media='all'">
+<style>
+:root{
+  --smoke:#241a14;
+  --soot:#17110d;
+  --wood:#2d2119;
+  --linden:#e6cd9c;
+  --linden-deep:#d6b984;
+  --ink:#3a2618;
+  --ink-soft:#5f4532;
+  --linen:#f5ede2;
+  --muted:#c9b7a2;
+  --ember:#f2a24a;
+  --ice:#a6dbe6;
+  --line:rgba(245,237,226,.14);
+  --display:"Prata","PT Serif","Palatino Linotype",Palatino,Georgia,serif;
+  --body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--smoke);color:var(--linen);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,6vw,54px);line-height:1.06}
+p{margin:0}
+.sub{color:var(--muted);max-width:52ch;margin-top:12px}
+.section{padding:72px 0}
+@media (min-width:900px){.section{padding:112px 0}}
+
+/* Плашка «демо» */
+.demo{background:var(--soot);color:var(--muted);font-size:13.5px;line-height:1.45;border-bottom:1px solid var(--line)}
+.demo .wrap{padding-top:9px;padding-bottom:9px}
+.demo b{color:var(--ice);font-weight:600}
+
+/* Шапка */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:20px;line-height:1}
+.brand svg{width:30px;height:30px;flex:none}
+.top-phone{display:none;text-decoration:none;font-weight:600;font-size:16px;font-variant-numeric:tabular-nums}
+.top-call{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--ember);color:var(--soot)}
+.top-call svg{width:20px;height:20px}
+@media (min-width:720px){.top-phone{display:inline}.top-call{display:none}}
+
+/* Первый экран */
+.hero{padding:4px 0 72px}
+.hero-grid{display:flex;flex-direction:column;gap:26px}
+.hero-media{margin:0 -20px}
+.hero-media figure{margin:0;overflow:hidden;background:var(--wood)}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hm-main{aspect-ratio:4/3}
+.hm-side{display:none}
+.hero h1{font-size:clamp(40px,7vw,66px);line-height:1.02;letter-spacing:-.01em}
+.hero-lead{font-size:clamp(18px,2.1vw,21px);line-height:1.5;max-width:34ch;margin-top:14px}
+.facts-line{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:22px 0 26px;color:var(--muted);font-size:15.5px}
+.open{display:inline-flex;align-items:center;gap:9px;color:var(--linen);font-weight:500}
+.open i{width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 0 4px rgba(166,219,230,.18)}
+.open.closed i{background:#8f8174;box-shadow:none}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,border-color .2s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-fire{background:var(--ember);color:var(--soot)}
+.btn-fire:hover{background:#ffb468}
+.btn-line{background:transparent;border-color:rgba(245,237,226,.38);color:var(--linen)}
+.btn-line:hover{border-color:var(--linen)}
+.phone-big{display:inline-block;margin-top:24px;font-family:var(--display);font-size:clamp(28px,4.4vw,38px);line-height:1.1;text-decoration:none;font-variant-numeric:tabular-nums}
+.rating-line{margin-top:8px;color:var(--muted);font-size:15.5px}
+.rating-line b{color:var(--ember);font-weight:600}
+@media (min-width:900px){
+  .hero{padding:24px 0 112px}
+  .hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:56px}
+  .hero-text{order:1}
+  .hero-media{order:2;margin:0;display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:540px}
+  .hero-media figure{border-radius:14px}
+  .hm-main{grid-row:1 / 3;aspect-ratio:auto}
+  .hm-side{display:block}
+}
+
+/* Бани и цены */
+.prices{background:var(--wood)}
+.plaques{display:grid;gap:18px;grid-template-columns:1fr;margin-top:40px}
+@media (min-width:640px){.plaques{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.plaques{grid-template-columns:repeat(3,1fr)}.plaque.wide{grid-column:span 2}}
+.plaque{position:relative;background:linear-gradient(175deg,var(--linden),var(--linden-deep));color:var(--ink);border-radius:10px;padding:34px 24px 24px;box-shadow:inset 0 0 0 1px rgba(58,38,24,.16),0 22px 34px -26px rgba(0,0,0,.9)}
+.plaque::before{content:"";position:absolute;top:13px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#7a5a3c;box-shadow:inset 0 1px 2px rgba(0,0,0,.55)}
+.plaque h3{font-size:29px;line-height:1.1;margin-bottom:16px}
+.rates{margin:0;display:grid;gap:10px}
+.rates div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-top:1px dashed rgba(58,38,24,.32);padding-top:10px}
+.rates dt{font-size:15px;line-height:1.35;color:var(--ink-soft)}
+.rates dd{margin:0;font-weight:600;font-size:20px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.plaque .note{font-size:14.5px;line-height:1.45;color:var(--ink-soft);margin-top:14px}
+.price-note{margin-top:28px;color:var(--muted);font-size:15.5px;max-width:62ch}
+
+/* Фото */
+.gallery-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 32px}
+.strip-nav{display:none;gap:10px}
+@media (min-width:900px){.strip-nav{display:flex}}
+.round{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(245,237,226,.38);background:transparent;cursor:pointer}
+.round:hover{border-color:var(--linen)}
+.round svg{width:20px;height:20px}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;padding:4px 20px 14px;margin:32px -20px 0;scrollbar-width:thin;scrollbar-color:rgba(245,237,226,.25) transparent}
+@media (min-width:640px){.strip{grid-auto-columns:46%}}
+@media (min-width:1000px){.strip{grid-auto-columns:calc((100% - 40px) / 3.3);margin:36px 0 0;padding:4px 0 14px;scroll-padding:0}}
+.shot{position:relative;margin:0;scroll-snap-align:start;border-radius:12px;overflow:hidden;background:var(--wood);aspect-ratio:4/3}
+.shot button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot figcaption{position:absolute;left:10px;bottom:10px;padding:5px 11px;border-radius:999px;background:rgba(23,17,13,.78);font-size:14px;pointer-events:none}
+.credit{margin-top:14px;font-size:14px;color:var(--muted)}
+
+/* Лайтбокс */
+.lightbox{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh;overflow:visible}
+.lightbox::backdrop{background:rgba(10,7,5,.88)}
+.lightbox img{max-width:min(1200px,94vw);max-height:86vh;width:auto;height:auto;border-radius:10px;margin:0 auto}
+.lightbox .close{position:absolute;top:-56px;right:0;width:46px;height:46px;border-radius:50%;border:1px solid rgba(245,237,226,.45);background:rgba(23,17,13,.6);color:var(--linen);font-size:26px;line-height:1;cursor:pointer}
+
+/* Отзывы */
+.reviews{background:var(--soot)}
+.reviews-grid{display:grid;gap:48px;margin-top:40px}
+@media (min-width:900px){.reviews-grid{grid-template-columns:1fr 1.05fr;gap:64px;align-items:start}}
+.score-row{display:flex;align-items:flex-end;gap:20px}
+.score{font-family:var(--display);font-size:clamp(84px,13vw,120px);line-height:.85;color:var(--ember)}
+.score-cap{color:var(--muted);max-width:22ch;padding-bottom:6px}
+.bars{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:13px;max-width:420px}
+.bars li{display:grid;grid-template-columns:7.2em 1fr 2.8em;align-items:center;gap:12px;font-size:15.5px}
+.bars b{font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
+.track{height:6px;border-radius:3px;background:rgba(245,237,226,.12);overflow:hidden}
+.track i{display:block;height:100%;border-radius:3px;background:var(--ember)}
+.bars-cap{font-size:14px;color:var(--muted);margin-top:12px}
+.praise{display:grid;gap:22px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.praise h3{font-size:23px;line-height:1.15;margin-bottom:4px}
+.praise p{color:var(--muted);max-width:48ch}
+.feed{position:relative;height:560px;overflow:hidden;border-radius:14px;background:#f3f1ed}
+.feed iframe{display:block;width:100%;height:1300px;border:0;animation:feed 42s ease-in-out 3s infinite alternate}
+.feed:hover iframe,.feed.paused iframe{animation-play-state:paused}
+@keyframes feed{from{transform:translateY(0)}to{transform:translateY(-740px)}}
+.feed-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin-top:14px;font-size:14.5px;color:var(--muted)}
+.feed-bar a{color:var(--linen);font-weight:500;text-underline-offset:4px}
+.link-btn{background:none;border:0;padding:0;color:var(--linen);font-weight:500;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+
+/* Что есть в бане */
+.facts{display:grid;margin:36px 0 0;border-top:1px solid var(--line)}
+@media (min-width:760px){.facts{grid-template-columns:1fr 1fr;column-gap:56px}}
+.facts div{display:grid;grid-template-columns:6.5em 1fr;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+
+/* Как добраться */
+.visit{background:var(--wood)}
+.visit-grid{display:grid;gap:32px;margin-top:36px}
+@media (min-width:900px){.visit-grid{grid-template-columns:.85fr 1.15fr;gap:56px}}
+.addr{font-family:var(--display);font-size:clamp(28px,4vw,38px);line-height:1.18}
+.visit-info p{margin-top:12px;color:var(--muted)}
+.visit-info .addr{margin-top:0;color:var(--linen)}
+.visit-info .actions{margin-top:28px}
+.write{margin-top:24px;color:var(--muted);font-size:15.5px}
+.write a{color:var(--linen);font-weight:500;text-underline-offset:4px}
+.map{position:relative;min-height:340px;border-radius:14px;overflow:hidden;background:var(--smoke);border:1px solid var(--line)}
+@media (min-width:900px){.map{min-height:440px}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-fallback{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);font-size:15px}
+
+/* Финальный призыв */
+.final{text-align:center;background:radial-gradient(110% 80% at 50% 115%,rgba(242,162,74,.32),transparent 62%),var(--soot)}
+.final p{color:var(--muted);max-width:40ch;margin:14px auto 30px}
+.final .actions{justify-content:center}
+
+/* Подвал */
+footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 120px;color:var(--muted);font-size:14.5px}
+@media (min-width:720px){footer{padding-bottom:40px}}
+
+/* Нижняя панель на телефоне */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.35fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(23,17,13,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.dock .btn{min-height:50px;padding:0 14px}
+@media (min-width:720px){.dock{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .feed{overflow-y:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="demo" role="note">
+  <div class="wrap"><b>Демо-концепт сайта</b> для бани «С лёгким паром». Это не официальный сайт — удалим по первой просьбе.</div>
+</div>
+
+<header class="wrap top">
+  <a class="brand" href="#top" aria-label="С лёгким паром, наверх">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 15c-2-2.5 2-4.5 0-8M16 15c-2-2.5 2-4.5 0-8M21 15c-2-2.5 2-4.5 0-8" fill="none" stroke="#f5ede2" stroke-width="2" stroke-linecap="round"/><ellipse cx="16" cy="23.5" rx="9" ry="4.8" fill="#f2a24a"/></svg>
+    <span>С лёгким паром</span>
+  </a>
+  <a class="top-phone" href="tel:+79273003300">+7 (927) 300-33-00</a>
+  <a class="top-call" href="tel:+79273003300" aria-label="Позвонить: +7 (927) 300-33-00">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.6 1.6a11.5 11.5 0 0 0 5.9 5.9l1.6-2.6 5 2v3.5a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></svg>
+  </a>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="name">
+  <div class="wrap hero-grid">
+    <div class="hero-media">
+      <figure class="hm-main"><img src="https://avatars.mds.yandex.net/get-altay/4547379/2a000001792caf1be7273f68c8f3690cf2e7/XXL" alt="Парная с деревянными полками" width="1024" height="682"></figure>
+      <figure class="hm-side"><img src="https://avatars.mds.yandex.net/get-altay/4336337/2a000001792caa746cad44ac05a8e2a47f85/XL" alt="Зал с росписью на стенах, столом и кухней" loading="lazy"></figure>
+      <figure class="hm-side"><img src="https://avatars.mds.yandex.net/get-altay/18132699/2a0000019cc95c0899df7cc4d57801e3bdd3/XL" alt="Бассейн" loading="lazy"></figure>
+    </div>
+    <div class="hero-text">
+      <h1 id="name">С лёгким паром</h1>
+      <p class="hero-lead">Баня на дровах в Уфе: русская и финская парная, купель и пармастера. Приезжайте семьёй или компанией.</p>
+      <div class="facts-line">
+        <span class="open" id="open" hidden><i aria-hidden="true"></i><span></span></span>
+        <span>Ежедневно с 09:00 до 01:00</span>
+        <span>ул. Сун-Ят-Сена, 53А</span>
+      </div>
+      <div class="actions">
+        <a class="btn btn-fire" href="tel:+79273003300">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.6 1.6a11.5 11.5 0 0 0 5.9 5.9l1.6-2.6 5 2v3.5a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></svg>
+          Позвонить
+        </a>
+        <a class="btn btn-line" href="https://yandex.ru/maps/?rtext=~54.711564%2C55.982839&amp;rtt=auto" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+          Маршрут
+        </a>
+      </div>
+      <a class="phone-big" href="tel:+79273003300">+7 (927) 300-33-00</a>
+      <p class="rating-line"><b>5,0</b> на Яндекс Картах, 625 оценок</p>
+    </div>
+  </div>
+</section>
+
+<section class="section prices" id="prices" aria-labelledby="prices-title">
+  <div class="wrap">
+    <h2 id="prices-title">Бани и цены</h2>
+    <p class="sub">В будни до 17:00 дешевле. Выберите баню и позвоните, чтобы забронировать время.</p>
+
+    <div class="plaques">
+      <article class="plaque">
+        <h3>Изба</h3>
+        <dl class="rates">
+          <div><dt>Будни до 17:00</dt><dd>1 500 ₽/ч</dd></div>
+          <div><dt>После 17:00 и в выходные</dt><dd>2 000 ₽/ч</dd></div>
+        </dl>
+      </article>
+      <article class="plaque">
+        <h3>Сказка</h3>
+        <dl class="rates">
+          <div><dt>Будни до 17:00</dt><dd>3 000 ₽/ч</dd></div>
+          <div><dt>После 17:00 и в выходные</dt><dd>3 500 ₽/ч</dd></div>
+        </dl>
+      </article>
+      <article class="plaque">
+        <h3>Большая баня</h3>
+        <dl class="rates">
+          <div><dt>Цена за час</dt><dd>4 000 ₽/ч</dd></div>
+        </dl>
+      </article>
+      <article class="plaque wide">
+        <h3>Баня с чаном</h3>
+        <dl class="rates">
+          <div><dt>Будни до 12:00</dt><dd>2 500 ₽/ч</dd></div>
+          <div><dt>Будни с 12:00 до 17:00</dt><dd>3 000 ₽/ч</dd></div>
+          <div><dt>После 17:00, в выходные и праздники</dt><dd>5 000 ₽/ч</dd></div>
+        </dl>
+        <p class="note">В будни до 17:00 чан оплачивается отдельно — 5 000 ₽. После 17:00, в выходные и праздники он входит в цену.</p>
+      </article>
+      <article class="plaque">
+        <h3>Русская баня на дровах</h3>
+        <dl class="rates">
+          <div><dt>Стоимость</dt><dd>3 500 ₽</dd></div>
+        </dl>
+        <p class="note">За какое время эта цена, уточняйте по телефону.</p>
+      </article>
+    </div>
+
+    <p class="price-note">Цены взяты из карточки бани на Яндекс Картах. Веники, пармастер и еда — за отдельную плату, их стоимость уточняйте по телефону.</p>
+  </div>
+</section>
+
+<section class="section" id="photos" aria-labelledby="photos-title">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div>
+        <h2 id="photos-title">Как внутри</h2>
+        <p class="sub">Листайте фото. Нажмите на снимок, чтобы открыть его крупнее.</p>
+      </div>
+      <div class="strip-nav">
+        <button class="round" type="button" data-dir="-1" aria-label="Предыдущие фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="round" type="button" data-dir="1" aria-label="Следующие фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="strip" id="strip">
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/4547379/2a000001792caf1be7273f68c8f3690cf2e7/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/4547379/2a000001792caf1be7273f68c8f3690cf2e7/XL" alt="Парная с деревянными полками" loading="lazy"></button><figcaption>Парная</figcaption></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/18132699/2a0000019cc95c0899df7cc4d57801e3bdd3/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/18132699/2a0000019cc95c0899df7cc4d57801e3bdd3/XL" alt="Бассейн" loading="lazy"></button><figcaption>Бассейн</figcaption></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/4336337/2a000001792caa746cad44ac05a8e2a47f85/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/4336337/2a000001792caa746cad44ac05a8e2a47f85/XL" alt="Зал с росписью на стенах, столом и кухней" loading="lazy"></button></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/11381866/2a0000018ca5e63e69f26d18fbdaf0520709/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/11381866/2a0000018ca5e63e69f26d18fbdaf0520709/XL" alt="Зона отдыха с резной мебелью" loading="lazy"></button><figcaption>Зона отдыха</figcaption></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/1886119/2a0000018b908b893a615b375d566801af9c/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/1886119/2a0000018b908b893a615b375d566801af9c/XL" alt="Деревянная комната с большим окном" loading="lazy"></button></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/927353/2a000001883a5d76c6a68e49c5d43360d08a/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/927353/2a000001883a5d76c6a68e49c5d43360d08a/XL" alt="Зал со столом и расписной печью" loading="lazy"></button></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/18105464/2a0000019c48441098810e4701b6bd2dae2c/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/18105464/2a0000019c48441098810e4701b6bd2dae2c/XL" alt="Печь и дрова" loading="lazy"></button></figure>
+      <figure class="shot"><button type="button" data-full="https://avatars.mds.yandex.net/get-altay/363317/2a00000186038d4e18907cc57daab8fd6d34/XXXL"><img src="https://avatars.mds.yandex.net/get-altay/363317/2a00000186038d4e18907cc57daab8fd6d34/XL" alt="Резная фигура в интерьере" loading="lazy"></button></figure>
+    </div>
+    <p class="credit">Фото — из карточки бани на Яндекс Картах.</p>
+  </div>
+</section>
+
+<dialog class="lightbox" id="lightbox" aria-label="Фото крупно">
+  <button class="close" type="button" aria-label="Закрыть">×</button>
+  <img alt="">
+</dialog>
+
+<section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <h2 id="reviews-title">Что говорят гости</h2>
+    <div class="reviews-grid">
+      <div>
+        <div class="score-row">
+          <div class="score" aria-hidden="true">5,0</div>
+          <p class="score-cap">Оценка 5,0 — 625 оценок и 299 отзывов на Яндекс Картах</p>
+        </div>
+        <ul class="bars">
+          <li><span>Впечатления</span><span class="track"><i style="width:99%"></i></span><b>99%</b></li>
+          <li><span>Баня</span><span class="track"><i style="width:98%"></i></span><b>98%</b></li>
+          <li><span>Атмосфера</span><span class="track"><i style="width:98%"></i></span><b>98%</b></li>
+          <li><span>Персонал</span><span class="track"><i style="width:95%"></i></span><b>95%</b></li>
+        </ul>
+        <p class="bars-cap">Доля положительных отзывов по темам.</p>
+        <div class="praise">
+          <div>
+            <h3>Лёгкий пар</h3>
+            <p>Парная на дровах, и дышится легко: в полке сделан приток свежего воздуха. Поддавать можно травяным отваром.</p>
+          </div>
+          <div>
+            <h3>Пармастера</h3>
+            <p>Их благодарят чаще всего, и многие гости приходят снова.</p>
+          </div>
+          <div>
+            <h3>Чисто и всё под рукой</h3>
+            <p>Тапочки, посуда, кухня с чайником, отдельный душ. Чай бесплатно, еду можно заказать.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="feed" id="feed">
+          <iframe src="https://yandex.ru/maps-reviews-widget/67546221570?comments" title="Отзывы гостей о бане «С лёгким паром» на Яндекс Картах" loading="lazy"></iframe>
+        </div>
+        <div class="feed-bar">
+          <button class="link-btn" type="button" id="feed-toggle">Остановить ленту</button>
+          <a href="https://yandex.ru/maps/org/s_legkim_parom/67546221570/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="amenities" aria-labelledby="amenities-title">
+  <div class="wrap">
+    <h2 id="amenities-title">Что есть в бане</h2>
+    <dl class="facts">
+      <div><dt>Парная</dt><dd>Русская и финская, на дровах</dd></div>
+      <div><dt>Вода</dt><dd>Купель и плавательный бассейн</dd></div>
+      <div><dt>Отдых</dt><dd>Караоке, бильярд, Wi-Fi</dd></div>
+      <div><dt>Еда</dt><dd>Халяль, по заказу</dd></div>
+      <div><dt>Подарок</dt><dd>Подарочные сертификаты</dd></div>
+      <div><dt>Оплата</dt><dd>Наличными, переводом, по СБП</dd></div>
+      <div><dt>Машина</dt><dd>Есть парковка</dd></div>
+      <div><dt>Запись</dt><dd>Предварительная, по телефону</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <h2 id="visit-title">Как добраться</h2>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <p class="addr">Уфа, ул. Сун-Ят-Сена, 53А</p>
+        <p>Ежедневно с 09:00 до 01:00. Есть парковка.</p>
+        <div class="actions">
+          <a class="btn btn-fire" href="https://yandex.ru/maps/?rtext=~54.711564%2C55.982839&amp;rtt=auto" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Маршрут
+          </a>
+          <a class="btn btn-line" href="tel:+79273003300">Позвонить</a>
+        </div>
+        <p class="write">Можно написать: <a href="https://wa.me/79273003300" target="_blank" rel="noopener">WhatsApp</a>, <a href="https://max.ru/u/f9LHodD0cOJTN4tVfQ_N2sc1jd98r8ZanC-A-gIKyCE6N0q4mWrartY1RN8" target="_blank" rel="noopener">MAX</a></p>
+      </div>
+      <div class="map">
+        <p class="map-fallback">Карта загружается. Если она не появилась, нажмите «Маршрут» — откроются Яндекс Карты.</p>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=55.982839%2C54.711564&amp;z=16&amp;ol=biz&amp;oid=67546221570" title="Баня «С лёгким паром» на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section final" aria-labelledby="final-title">
+  <div class="wrap">
+    <h2 id="final-title">Забронировать баню</h2>
+    <p>Запись предварительная. Позвоните, чтобы выбрать баню и время.</p>
+    <div class="actions">
+      <a class="btn btn-fire" href="tel:+79273003300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.6 1.6a11.5 11.5 0 0 0 5.9 5.9l1.6-2.6 5 2v3.5a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></svg>
+        +7 (927) 300-33-00
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Это демо-концепт сайта, а не официальный сайт бани «С лёгким паром». Цены, фото и отзывы взяты из открытой карточки на Яндекс Картах в октябре 2026 года. Удалим по первой просьбе.</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Быстрые действия">
+  <a class="btn btn-fire" href="tel:+79273003300">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.6 1.6a11.5 11.5 0 0 0 5.9 5.9l1.6-2.6 5 2v3.5a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></svg>
+    Позвонить
+  </a>
+  <a class="btn btn-line" href="https://yandex.ru/maps/?rtext=~54.711564%2C55.982839&amp;rtt=auto" target="_blank" rel="noopener">Маршрут</a>
+</nav>
+
+<script>
+(function () {
+  // Открыто или закрыто — по времени Уфы
+  var open = document.getElementById('open');
+  try {
+    var parts = new Intl.DateTimeFormat('ru-RU', {timeZone: 'Asia/Yekaterinburg', hour: 'numeric', hourCycle: 'h23'}).formatToParts(new Date());
+    var hour = parseInt(parts.filter(function (p) { return p.type === 'hour'; })[0].value, 10);
+    var isOpen = hour >= 9 || hour < 1;
+    open.querySelector('span').textContent = isOpen ? 'Открыто до 01:00' : 'Закрыто, откроется в 09:00';
+    open.classList.toggle('closed', !isOpen);
+    open.hidden = false;
+  } catch (e) {}
+
+  // Лента фото: кнопки на компьютере
+  var strip = document.getElementById('strip');
+  document.querySelectorAll('.strip-nav .round').forEach(function (b) {
+    b.addEventListener('click', function () {
+      strip.scrollBy({left: Number(b.dataset.dir) * strip.clientWidth * 0.9, behavior: 'smooth'});
+    });
+  });
+
+  // Фото крупно
+  var box = document.getElementById('lightbox');
+  var boxImg = box.querySelector('img');
+  strip.querySelectorAll('button[data-full]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      boxImg.src = b.dataset.full;
+      boxImg.alt = b.querySelector('img').alt;
+      if (box.showModal) { box.showModal(); } else { window.open(b.dataset.full, '_blank'); }
+    });
+  });
+  box.querySelector('.close').addEventListener('click', function () { box.close(); });
+  box.addEventListener('click', function (e) { if (e.target === box) { box.close(); } });
+
+  // Лента отзывов: пауза по кнопке
+  var feed = document.getElementById('feed');
+  var toggle = document.getElementById('feed-toggle');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    toggle.hidden = true;
+  } else {
+    toggle.addEventListener('click', function () {
+      var paused = feed.classList.toggle('paused');
+      toggle.textContent = paused ? 'Запустить ленту' : 'Остановить ленту';
+    });
+  }
+})();
+</script>
+</body>
+</html>
