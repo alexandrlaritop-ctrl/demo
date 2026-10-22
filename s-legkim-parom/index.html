@@ -12,7 +12,7 @@
 <meta property="og:title" content="С лёгким паром — баня на дровах в Уфе">
 <meta property="og:description" content="Демо-концепт сайта: цены на бани, фото, отзывы гостей, адрес и звонок в одно касание.">
 <meta property="og:image" content="https://avatars.mds.yandex.net/get-altay/4547379/2a000001792caf1be7273f68c8f3690cf2e7/XXL">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23241a14'/%3E%3Cpath d='M11 15c-2-2.5 2-4.5 0-8M16 15c-2-2.5 2-4.5 0-8M21 15c-2-2.5 2-4.5 0-8' fill='none' stroke='%23f5ede2' stroke-width='2' stroke-linecap='round'/%3E%3Cellipse cx='16' cy='23.5' rx='9' ry='4.8' fill='%23f2a24a'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23241a14%22/%3E%3Cg%20transform%3D%22translate%288%204%29%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22fg%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f8c47c%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23d9822c%22/%3E%3C/linearGradient%3E%3CradialGradient%20id%3D%22fh%22%20cx%3D%2250%25%22%20cy%3D%2218%25%22%20r%3D%2262%25%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fff6e6%22%20stop-opacity%3D%22.55%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fff6e6%22%20stop-opacity%3D%220%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath%20d%3D%22M4%2055V24a20%2020%200%200%201%2040%200v31z%22%20fill%3D%22url%28%23fg%29%22/%3E%3Cpath%20d%3D%22M4%2055V24a20%2020%200%200%201%2040%200v31z%22%20fill%3D%22url%28%23fh%29%22/%3E%3Cpath%20d%3D%22M8.5%2055V24.4a15.5%2015.5%200%200%201%2031%200V55%22%20fill%3D%22none%22%20stroke%3D%22%237a4518%22%20stroke-opacity%3D%22.38%22%20stroke-width%3D%221.2%22/%3E%3Cg%20transform%3D%22translate%2810.6%2020.4%29%20scale%281.12%29%22%3E%3Cpath%20d%3D%22M7.5%2020c-2-2.6%202-4.6%200-7.8s2-4.6%200-7.8M12%2020c-2-2.6%202-4.6%200-7.8s2-4.6%200-7.8M16.5%2020c-2-2.6%202-4.6%200-7.8s2-4.6%200-7.8%22%20fill%3D%22none%22%20stroke%3D%22%232a1a10%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Prata&display=swap" media="print" onload="this.media='all'">
@@ -30,6 +30,18 @@
   --ember:#f2a24a;
   --ice:#a6dbe6;
   --line:rgba(245,237,226,.14);
+  --linen-rgb:245,237,226;
+  --soot-rgb:23,17,13;
+  --ember-rgb:242,162,74;
+  --ice-rgb:166,219,230;
+  --ink-rgb:58,38,24;
+  --ember-hi:#ffb468;
+  --on-ember:var(--soot);
+  --closed:#8f8174;
+  --nail:#7a5a3c;
+  --cap-bg:rgba(23,17,13,.78);
+  --cap-fg:var(--linen);
+  --glow-a:.32;
   --display:"Prata","PT Serif","Palatino Linotype",Palatino,Georgia,serif;
   --body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   color-scheme:dark;
@@ -57,10 +69,12 @@ p{margin:0}
 
 /* Шапка */
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:20px;line-height:1}
-.brand svg{width:30px;height:30px;flex:none}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .emblem{width:34px;height:40px;flex:none}
+.brand-name{display:block;font-family:var(--display);font-size:20px;line-height:1.05}
+.brand-tag{display:block;margin-top:3px;font-size:12.5px;line-height:1.2;color:var(--muted)}
 .top-phone{display:none;text-decoration:none;font-weight:600;font-size:16px;font-variant-numeric:tabular-nums}
-.top-call{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--ember);color:var(--soot)}
+.top-call{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--ember);color:var(--on-ember)}
 .top-call svg{width:20px;height:20px}
 @media (min-width:720px){.top-phone{display:inline}.top-call{display:none}}
 
@@ -76,14 +90,14 @@ p{margin:0}
 .hero-lead{font-size:clamp(18px,2.1vw,21px);line-height:1.5;max-width:34ch;margin-top:14px}
 .facts-line{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:22px 0 26px;color:var(--muted);font-size:15.5px}
 .open{display:inline-flex;align-items:center;gap:9px;color:var(--linen);font-weight:500}
-.open i{width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 0 4px rgba(166,219,230,.18)}
-.open.closed i{background:#8f8174;box-shadow:none}
+.open i{width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 0 4px rgba(var(--ice-rgb),.18)}
+.open.closed i{background:var(--closed);box-shadow:none}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,border-color .2s}
 .btn svg{width:19px;height:19px;flex:none}
-.btn-fire{background:var(--ember);color:var(--soot)}
-.btn-fire:hover{background:#ffb468}
-.btn-line{background:transparent;border-color:rgba(245,237,226,.38);color:var(--linen)}
+.btn-fire{background:var(--ember);color:var(--on-ember)}
+.btn-fire:hover{background:var(--ember-hi)}
+.btn-line{background:transparent;border-color:rgba(var(--linen-rgb),.38);color:var(--linen)}
 .btn-line:hover{border-color:var(--linen)}
 .phone-big{display:inline-block;margin-top:24px;font-family:var(--display);font-size:clamp(28px,4.4vw,38px);line-height:1.1;text-decoration:none;font-variant-numeric:tabular-nums}
 .rating-line{margin-top:8px;color:var(--muted);font-size:15.5px}
@@ -103,11 +117,11 @@ p{margin:0}
 .plaques{display:grid;gap:18px;grid-template-columns:1fr;margin-top:40px}
 @media (min-width:640px){.plaques{grid-template-columns:1fr 1fr}}
 @media (min-width:1000px){.plaques{grid-template-columns:repeat(3,1fr)}.plaque.wide{grid-column:span 2}}
-.plaque{position:relative;background:linear-gradient(175deg,var(--linden),var(--linden-deep));color:var(--ink);border-radius:10px;padding:34px 24px 24px;box-shadow:inset 0 0 0 1px rgba(58,38,24,.16),0 22px 34px -26px rgba(0,0,0,.9)}
-.plaque::before{content:"";position:absolute;top:13px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#7a5a3c;box-shadow:inset 0 1px 2px rgba(0,0,0,.55)}
+.plaque{position:relative;background:linear-gradient(175deg,var(--linden),var(--linden-deep));color:var(--ink);border-radius:10px;padding:34px 24px 24px;box-shadow:inset 0 0 0 1px rgba(var(--ink-rgb),.16),0 22px 34px -26px rgba(0,0,0,.9)}
+.plaque::before{content:"";position:absolute;top:13px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--nail);box-shadow:inset 0 1px 2px rgba(0,0,0,.55)}
 .plaque h3{font-size:29px;line-height:1.1;margin-bottom:16px}
 .rates{margin:0;display:grid;gap:10px}
-.rates div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-top:1px dashed rgba(58,38,24,.32);padding-top:10px}
+.rates div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-top:1px dashed rgba(var(--ink-rgb),.32);padding-top:10px}
 .rates dt{font-size:15px;line-height:1.35;color:var(--ink-soft)}
 .rates dd{margin:0;font-weight:600;font-size:20px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .plaque .note{font-size:14.5px;line-height:1.45;color:var(--ink-soft);margin-top:14px}
@@ -117,23 +131,23 @@ p{margin:0}
 .gallery-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 32px}
 .strip-nav{display:none;gap:10px}
 @media (min-width:900px){.strip-nav{display:flex}}
-.round{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(245,237,226,.38);background:transparent;cursor:pointer}
+.round{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(var(--linen-rgb),.38);background:transparent;cursor:pointer}
 .round:hover{border-color:var(--linen)}
 .round svg{width:20px;height:20px}
-.strip{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;padding:4px 20px 14px;margin:32px -20px 0;scrollbar-width:thin;scrollbar-color:rgba(245,237,226,.25) transparent}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;padding:4px 20px 14px;margin:32px -20px 0;scrollbar-width:thin;scrollbar-color:rgba(var(--linen-rgb),.25) transparent}
 @media (min-width:640px){.strip{grid-auto-columns:46%}}
 @media (min-width:1000px){.strip{grid-auto-columns:calc((100% - 40px) / 3.3);margin:36px 0 0;padding:4px 0 14px;scroll-padding:0}}
 .shot{position:relative;margin:0;scroll-snap-align:start;border-radius:12px;overflow:hidden;background:var(--wood);aspect-ratio:4/3}
 .shot button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
 .shot img{width:100%;height:100%;object-fit:cover}
-.shot figcaption{position:absolute;left:10px;bottom:10px;padding:5px 11px;border-radius:999px;background:rgba(23,17,13,.78);font-size:14px;pointer-events:none}
+.shot figcaption{position:absolute;left:10px;bottom:10px;padding:5px 11px;border-radius:999px;background:var(--cap-bg);color:var(--cap-fg);font-size:14px;pointer-events:none}
 .credit{margin-top:14px;font-size:14px;color:var(--muted)}
 
 /* Лайтбокс */
 .lightbox{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh;overflow:visible}
 .lightbox::backdrop{background:rgba(10,7,5,.88)}
 .lightbox img{max-width:min(1200px,94vw);max-height:86vh;width:auto;height:auto;border-radius:10px;margin:0 auto}
-.lightbox .close{position:absolute;top:-56px;right:0;width:46px;height:46px;border-radius:50%;border:1px solid rgba(245,237,226,.45);background:rgba(23,17,13,.6);color:var(--linen);font-size:26px;line-height:1;cursor:pointer}
+.lightbox .close{position:absolute;top:-56px;right:0;width:46px;height:46px;border-radius:50%;border:1px solid rgba(var(--linen-rgb),.45);background:rgba(var(--soot-rgb),.6);color:var(--linen);font-size:26px;line-height:1;cursor:pointer}
 
 /* Отзывы */
 .reviews{background:var(--soot)}
@@ -145,7 +159,7 @@ p{margin:0}
 .bars{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:13px;max-width:420px}
 .bars li{display:grid;grid-template-columns:7.2em 1fr 2.8em;align-items:center;gap:12px;font-size:15.5px}
 .bars b{font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
-.track{height:6px;border-radius:3px;background:rgba(245,237,226,.12);overflow:hidden}
+.track{height:6px;border-radius:3px;background:rgba(var(--linen-rgb),.12);overflow:hidden}
 .track i{display:block;height:100%;border-radius:3px;background:var(--ember)}
 .bars-cap{font-size:14px;color:var(--muted);margin-top:12px}
 .praise{display:grid;gap:22px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
@@ -182,16 +196,19 @@ p{margin:0}
 .map-fallback{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);font-size:15px}
 
 /* Финальный призыв */
-.final{text-align:center;background:radial-gradient(110% 80% at 50% 115%,rgba(242,162,74,.32),transparent 62%),var(--soot)}
+.final{text-align:center;background:radial-gradient(110% 80% at 50% 115%,rgba(var(--ember-rgb),var(--glow-a)),transparent 62%),var(--soot)}
 .final p{color:var(--muted);max-width:40ch;margin:14px auto 30px}
 .final .actions{justify-content:center}
+.final .emblem{width:58px;height:68px;margin:0 auto 22px}
+.no-prices{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:28px}
+.no-prices p{color:var(--muted);max-width:44ch}
 
 /* Подвал */
 footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 120px;color:var(--muted);font-size:14.5px}
 @media (min-width:720px){footer{padding-bottom:40px}}
 
 /* Нижняя панель на телефоне */
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.35fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(23,17,13,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1.35fr 1fr;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(var(--soot-rgb),.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
 .dock .btn{min-height:50px;padding:0 14px}
 @media (min-width:720px){.dock{display:none}}
 
@@ -209,8 +226,8 @@ footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 12
 
 <header class="wrap top">
   <a class="brand" href="#top" aria-label="С лёгким паром, наверх">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 15c-2-2.5 2-4.5 0-8M16 15c-2-2.5 2-4.5 0-8M21 15c-2-2.5 2-4.5 0-8" fill="none" stroke="#f5ede2" stroke-width="2" stroke-linecap="round"/><ellipse cx="16" cy="23.5" rx="9" ry="4.8" fill="#f2a24a"/></svg>
-    <span>С лёгким паром</span>
+    <svg class="emblem" viewBox="0 0 48 56" aria-hidden="true"><defs><linearGradient id="hdg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8c47c"/><stop offset="1" stop-color="#d9822c"/></linearGradient><radialGradient id="hdh" cx="50%" cy="18%" r="62%"><stop offset="0" stop-color="#fff6e6" stop-opacity=".55"/><stop offset="1" stop-color="#fff6e6" stop-opacity="0"/></radialGradient></defs><path d="M4 55V24a20 20 0 0 1 40 0v31z" fill="url(#hdg)"/><path d="M4 55V24a20 20 0 0 1 40 0v31z" fill="url(#hdh)"/><path d="M8.5 55V24.4a15.5 15.5 0 0 1 31 0V55" fill="none" stroke="#7a4518" stroke-opacity=".38" stroke-width="1.2"/><g transform="translate(10.6 20.4) scale(1.12)"><path d="M7.5 20c-2-2.6 2-4.6 0-7.8s2-4.6 0-7.8M12 20c-2-2.6 2-4.6 0-7.8s2-4.6 0-7.8M16.5 20c-2-2.6 2-4.6 0-7.8s2-4.6 0-7.8" fill="none" stroke="#2a1a10" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+    <span><span class="brand-name">С лёгким паром</span><span class="brand-tag">баня в Уфе</span></span>
   </a>
   <a class="top-phone" href="tel:+79273003300">+7 (927) 300-33-00</a>
   <a class="top-call" href="tel:+79273003300" aria-label="Позвонить: +7 (927) 300-33-00">
@@ -364,7 +381,7 @@ footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 12
 
       <div>
         <div class="feed" id="feed">
-          <iframe src="https://yandex.ru/maps-reviews-widget/67546221570?comments" title="Отзывы гостей о бане «С лёгким паром» на Яндекс Картах" loading="lazy"></iframe>
+          <iframe src="https://yandex.ru/maps-reviews-widget/67546221570?comments" title="Отзывы гостей о «С лёгким паром» на Яндекс Картах" loading="lazy"></iframe>
         </div>
         <div class="feed-bar">
           <button class="link-btn" type="button" id="feed-toggle">Остановить ленту</button>
@@ -409,7 +426,7 @@ footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 12
       </div>
       <div class="map">
         <p class="map-fallback">Карта загружается. Если она не появилась, нажмите «Маршрут» — откроются Яндекс Карты.</p>
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=55.982839%2C54.711564&amp;z=16&amp;ol=biz&amp;oid=67546221570" title="Баня «С лёгким паром» на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=55.982839%2C54.711564&amp;z=16&amp;ol=biz&amp;oid=67546221570" title="«С лёгким паром» на Яндекс Картах" loading="lazy" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -417,6 +434,7 @@ footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 12
 
 <section class="section final" aria-labelledby="final-title">
   <div class="wrap">
+    <svg class="emblem" viewBox="0 0 48 56" aria-hidden="true"><defs><linearGradient id="ftg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8c47c"/><stop offset="1" stop-color="#d9822c"/></linearGradient><radialGradient id="fth" cx="50%" cy="18%" r="62%"><stop offset="0" stop-color="#fff6e6" stop-opacity=".55"/><stop offset="1" stop-color="#fff6e6" stop-opacity="0"/></radialGradient></defs><path d="M4 55V24a20 20 0 0 1 40 0v31z" fill="url(#ftg)"/><path d="M4 55V24a20 20 0 0 1 40 0v31z" fill="url(#fth)"/><path d="M8.5 55V24.4a15.5 15.5 0 0 1 31 0V55" fill="none" stroke="#7a4518" stroke-opacity=".38" stroke-width="1.2"/><g transform="translate(10.6 20.4) scale(1.12)"><path d="M7.5 20c-2-2.6 2-4.6 0-7.8s2-4.6 0-7.8M12 20c-2-2.6 2-4.6 0-7.8s2-4.6 0-7.8M16.5 20c-2-2.6 2-4.6 0-7.8s2-4.6 0-7.8" fill="none" stroke="#2a1a10" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
     <h2 id="final-title">Забронировать баню</h2>
     <p>Запись предварительная. Позвоните, чтобы выбрать баню и время.</p>
     <div class="actions">
@@ -446,37 +464,58 @@ footer{background:var(--soot);border-top:1px solid var(--line);padding:30px 0 12
 
 <script>
 (function () {
-  // Открыто или закрыто — по времени Уфы
+  var H ={"always": false, "week": [["09:00", "01:00"], ["09:00", "01:00"], ["09:00", "01:00"], ["09:00", "01:00"], ["09:00", "01:00"], ["09:00", "01:00"], ["09:00", "01:00"]]};
+  var TZ = "Asia/Yekaterinburg";
+  // Открыто или закрыто — по местному времени бизнеса
   var open = document.getElementById('open');
   try {
-    var parts = new Intl.DateTimeFormat('ru-RU', {timeZone: 'Asia/Yekaterinburg', hour: 'numeric', hourCycle: 'h23'}).formatToParts(new Date());
-    var hour = parseInt(parts.filter(function (p) { return p.type === 'hour'; })[0].value, 10);
-    var isOpen = hour >= 9 || hour < 1;
-    open.querySelector('span').textContent = isOpen ? 'Открыто до 01:00' : 'Закрыто, откроется в 09:00';
-    open.classList.toggle('closed', !isOpen);
-    open.hidden = false;
-  } catch (e) {}
+    var f = new Intl.DateTimeFormat('en-US', {timeZone: TZ, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'}).formatToParts(new Date());
+    var get = function (t) { return f.filter(function (p) { return p.type === t; })[0].value; };
+    var day = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(get('weekday'));
+    var now = parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10);
+    var m = function (s) { var p = s.split(':'); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); };
+    var text = null, isOpen = false;
+    if (H.always) { isOpen = true; text = 'Открыто круглосуточно'; }
+    else if (H.week && day >= 0) {
+      var today = H.week[day], prev = H.week[(day + 6) % 7];
+      if (prev && m(prev[1]) <= m(prev[0]) && now < m(prev[1])) { isOpen = true; text = 'Открыто до ' + prev[1]; }
+      else if (today) {
+        var o = m(today[0]), c = m(today[1]);
+        if (c <= o ? now >= o : (now >= o && now < c)) { isOpen = true; text = 'Открыто до ' + today[1]; }
+        else if (now < o) { text = 'Закрыто, откроется в ' + today[0]; }
+      }
+      if (!isOpen && !text) {
+        for (var k = 1; k <= 7; k++) { var d = H.week[(day + k) % 7]; if (d) { text = 'Закрыто, откроется ' + (k === 1 ? 'завтра' : 'позже') + ' в ' + d[0]; break; } }
+      }
+    }
+    if (text) {
+      open.querySelector('span').textContent = text;
+      open.classList.toggle('closed', !isOpen);
+      open.hidden = false;
+    }
+  } catch (err) {}
 
   // Лента фото: кнопки на компьютере
   var strip = document.getElementById('strip');
-  document.querySelectorAll('.strip-nav .round').forEach(function (b) {
-    b.addEventListener('click', function () {
-      strip.scrollBy({left: Number(b.dataset.dir) * strip.clientWidth * 0.9, behavior: 'smooth'});
+  if (strip) {
+    document.querySelectorAll('.strip-nav .round').forEach(function (b) {
+      b.addEventListener('click', function () {
+        strip.scrollBy({left: Number(b.dataset.dir) * strip.clientWidth * 0.9, behavior: 'smooth'});
+      });
     });
-  });
-
-  // Фото крупно
-  var box = document.getElementById('lightbox');
-  var boxImg = box.querySelector('img');
-  strip.querySelectorAll('button[data-full]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      boxImg.src = b.dataset.full;
-      boxImg.alt = b.querySelector('img').alt;
-      if (box.showModal) { box.showModal(); } else { window.open(b.dataset.full, '_blank'); }
+    // Фото крупно
+    var box = document.getElementById('lightbox');
+    var boxImg = box.querySelector('img');
+    strip.querySelectorAll('button[data-full]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        boxImg.src = b.dataset.full;
+        boxImg.alt = b.querySelector('img').alt;
+        if (box.showModal) { box.showModal(); } else { window.open(b.dataset.full, '_blank'); }
+      });
     });
-  });
-  box.querySelector('.close').addEventListener('click', function () { box.close(); });
-  box.addEventListener('click', function (e) { if (e.target === box) { box.close(); } });
+    box.querySelector('.close').addEventListener('click', function () { box.close(); });
+    box.addEventListener('click', function (ev) { if (ev.target === box) { box.close(); } });
+  }
 
   // Лента отзывов: пауза по кнопке
   var feed = document.getElementById('feed');
