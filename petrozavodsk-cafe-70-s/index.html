@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Cafe 70`s — Кафе · Петрозаводск</title>
+<meta name="description" content="У нас: ланч от 390 ₽, русская кухня, европейская кухня, бизнес-ланч. Гости ставят нам 4,9 — это 115 отзывов на картах. Ждём вас по адресу: проспект Ленина, 10.">
+<meta name="theme-color" content="#c26a2e">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap">
+<style>
+:root{--bg:#f6efe5;--surface:#fffaf2;--fg:#2a1d13;--muted:#7b6857;--line:#e7d8c5;--accent:#c26a2e;--h:"Playfair Display", Georgia, serif;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 Inter, system-ui, sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--h);font-weight:700;line-height:1.08;letter-spacing:-.02em}
+.wrap{width:min(1180px,100% - 40px);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;background:var(--accent);color:#fff;border:0;cursor:pointer;transition:transform .25s,box-shadow .25s,filter .25s;box-shadow:0 10px 30px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);box-shadow:none;backdrop-filter:blur(8px)}
+.btn.sm{min-height:42px;padding:0 20px;font-size:14.5px}
+.kicker{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.stars{display:inline-flex;gap:2px;color:#f5b301;letter-spacing:0}.stars .off{opacity:.28}
+/* шапка */
+.nav{position:fixed;inset:0 0 auto;z-index:20;color:#fff;transition:background .35s,color .35s,box-shadow .35s}
+.nav-in{display:flex;align-items:center;gap:28px;height:76px}
+.brand{font-family:var(--h);font-weight:700;font-size:20px;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw}
+.links{display:none;gap:26px;margin-left:auto;font-size:15px}.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.nav .btn{margin-left:auto}
+.nav.solid{background:color-mix(in srgb,var(--surface) 86%,transparent);color:var(--fg);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+/* первый экран */
+.hero{position:relative;min-height:100svh;min-height:100vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#111}
+.hero-media{position:absolute;inset:-12% 0 0;will-change:transform}
+.slide{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transition:opacity 1.6s ease;transform:scale(1.04)}
+.slide.on{opacity:1;animation:kb 14s ease-out forwards}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16)}}
+.slide.empty{background:radial-gradient(120% 90% at 20% 10%,color-mix(in srgb,var(--accent) 70%,#fff 0%),#111 70%)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.05) 30%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.82) 100%)}
+.hero-content{position:relative;padding:0 0 112px}
+.eyebrow{font-size:15px;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:16px}
+.hero h1{font-size:clamp(44px,9vw,104px);max-width:14ch;text-wrap:balance}
+.hero-rating{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:9px 16px;border-radius:999px;background:rgba(0,0,0,.28);backdrop-filter:blur(8px);font-size:15px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-nav{position:absolute;right:max(20px,calc((100% - 1180px)/2));bottom:40px;display:flex;align-items:center;gap:14px}
+.dots{display:flex;gap:8px}.dot{width:28px;height:4px;border-radius:4px;border:0;background:rgba(255,255,255,.35);cursor:pointer;transition:background .3s,width .3s}.dot.on{width:48px;background:#fff}
+.hero-nav button[data-hero]{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.2);color:#fff;font-size:22px;cursor:pointer;display:none}
+/* факты */
+.facts{position:relative;z-index:2;margin-top:-56px;display:grid;gap:12px;grid-template-columns:1fr}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;box-shadow:0 18px 50px rgba(0,0,0,.08)}
+.fact small{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.fact b{display:block;font-size:17px;font-weight:600;line-height:1.4}.fact b a{text-decoration:none}
+.fact span,.fact a{font-size:14px;color:var(--muted);text-decoration:none}.fact>a{display:inline-block;margin-top:6px;color:var(--accent);font-weight:600}
+section.block{padding:110px 0}
+/* о нас */
+.about{display:grid;gap:48px;align-items:center}
+.about h2{font-size:clamp(34px,5vw,56px);margin-bottom:22px}
+.about p.text{font-size:18.5px;color:var(--fg);opacity:.9;max-width:56ch}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-top:30px;list-style:none}
+.feats li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.feats li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.frame{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.18)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.18);will-change:transform}
+/* ленты: фото и отзывы */
+.row-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px}
+.row-head h2{font-size:clamp(32px,4.6vw,52px)}
+.arrows{display:none;gap:10px}.arrows button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:22px;cursor:pointer;transition:background .25s,color .25s}.arrows button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.track{display:grid;grid-auto-flow:column;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(20px,calc((100% - 1180px)/2)) 30px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.shot{width:min(78vw,380px);aspect-ratio:4/5;border-radius:24px;overflow:hidden;scroll-snap-align:center}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}.shot:hover img{transform:scale(1.06)}
+/* цитата на фото */
+.quote{position:relative;padding:150px 0;color:#fff;text-align:center;overflow:hidden;background:#111}
+.quote-bg{position:absolute;inset:0;background:center/cover no-repeat;opacity:.55}
+.quote .wrap{position:relative;max-width:900px}
+.quote blockquote{font-family:var(--h);font-size:clamp(26px,3.6vw,42px);line-height:1.25;margin:22px 0 20px;text-wrap:balance}
+.quote cite{font-style:normal;opacity:.85}
+.reviews-sec{background:var(--surface);border-block:1px solid var(--line)}
+.review{width:min(86vw,400px);scroll-snap-align:start;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:16px}
+.review p{font-size:16px;line-height:1.65;flex:1}
+.review footer{display:flex;align-items:center;gap:12px}.review footer b{display:block;font-size:15px}.review footer small{color:var(--muted);font-size:13px}
+.ava{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-weight:700}
+.more{display:inline-block;margin-top:6px;color:var(--accent);font-weight:600;text-decoration:none}
+/* контакты */
+.contacts{display:grid;gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:34px}
+.card h2{font-size:clamp(32px,4.4vw,48px);margin-bottom:26px}
+.card dl{display:grid;gap:18px}.card dt{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.card dd{font-size:17px}.card dd a{text-decoration:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.chips a{padding:9px 16px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-size:14.5px;transition:border-color .25s,color .25s}.chips a:hover{border-color:var(--accent);color:var(--accent)}
+.map{min-height:360px;border-radius:28px;overflow:hidden;border:1px solid var(--line)}.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+/* финал */
+.final{padding:120px 0;text-align:center}
+.final h2{font-size:clamp(40px,6vw,76px);margin-bottom:16px}
+.final p{color:var(--muted);font-size:18px}.final .hero-cta{justify-content:center}
+.final .btn.glass{background:transparent;color:var(--fg);border-color:var(--line)}
+footer.site{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--muted);font-size:14px}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+/* кнопки внизу на телефоне */
+.bar{position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:30;display:flex;gap:8px;transform:translateY(140%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.bar.show{transform:none}.bar .btn{flex:1}.bar .btn.glass{background:var(--fg);color:var(--bg);border:0}
+/* появление при прокрутке — только если работает JS */
+.js .reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media(min-width:760px){
+.links{display:flex}.nav .btn{margin-left:0}
+.facts{grid-template-columns:repeat(4,1fr)}
+.about{grid-template-columns:1.05fr .95fr;gap:72px}
+.arrows,.hero-nav button[data-hero]{display:flex}.hero-nav button[data-hero]{align-items:center;justify-content:center}
+.contacts{grid-template-columns:1fr 1.1fr}
+.bar{display:none}
+footer.site{padding-bottom:30px}
+.quote-bg{background-attachment:fixed}
+}
+@media(prefers-reduced-motion:reduce){.slide,.slide.on{animation:none;transition:none}.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="#top">Cafe 70`s</a><nav class="links"><a href="#about">О нас</a><a href="#contacts">Контакты</a></nav><a class="btn sm" href="tel:+78142764755">Позвонить</a></div></header>
+
+<section class="hero" id="top">
+<div class="hero-media"><div class="slide on" style="background-image:url('photo-1.jpg')"></div></div>
+<div class="hero-shade"></div>
+<div class="wrap hero-content">
+<p class="eyebrow">Кафе · Петрозаводск</p><h1>Cafe 70`s</h1>
+<div class="hero-rating"><span class="stars" aria-label="5 из 5"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><span>4,9 · 115 отзывов на картах</span></div>
+<div class="hero-cta"><a class="btn" href="tel:+78142764755">Позвонить</a><a class="btn glass" href="https://wa.me/79114119167">WhatsApp</a></div>
+</div>
+
+</section>
+
+<div class="wrap facts reveal"><div class="fact"><small>Рейтинг</small><b><span class="stars" aria-label="5 из 5"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span> 4,9</b><span>115 отзывов</span></div><div class="fact"><small>Часы работы</small><b>Ежедневно 10:00–22:00</b></div><div class="fact"><small>Адрес</small><b>проспект Ленина, 10</b><a href="https://yandex.ru/maps/?rtext=~61.79165,34.367535&amp;rtt=auto">Построить маршрут →</a></div><div class="fact"><small>Телефон</small><b><a href="tel:+78142764755">+7 814 276-47-55</a></b></div></div>
+
+<section class="block" id="about"><div class="wrap about">
+<div class="reveal"><span class="kicker">О нас</span><h2>Cafe 70`s</h2><p class="text">У нас: ланч от 390 ₽, русская кухня, европейская кухня, бизнес-ланч. Гости ставят нам 4,9 — это 115 отзывов на картах. Ждём вас по адресу: проспект Ленина, 10.</p><ul class="feats"><li>Ланч от 390 ₽</li><li>Русская кухня</li><li>Европейская кухня</li><li>Бизнес-ланч</li><li>Завтрак</li><li>Заказ столиков</li><li>Заказ навынос</li><li>Винная карта</li></ul></div>
+<div class="frame reveal"><img src="photo-1.jpg" alt="Cafe 70`s" data-speed="0.12" loading="lazy"></div>
+</div></section>
+
+
+
+
+
+
+
+<section class="block" id="contacts"><div class="wrap contacts">
+<div class="card reveal"><span class="kicker">Контакты</span><h2>Как нас найти</h2><dl><div><dt>Адрес</dt><dd>проспект Ленина, 10</dd></div><div><dt>Часы работы</dt><dd>Ежедневно 10:00–22:00</dd></div><div><dt>Телефон</dt><dd><a href="tel:+78142764755">+7 814 276-47-55</a><br><a href="tel:+79114119167">+7 911 411-91-67</a></dd></div><div><dt>Написать и доехать</dt><dd class="chips"><a href="https://wa.me/79114119167">WhatsApp</a><a href="https://vk.com/70e_godi">ВКонтакте</a><a href="https://yandex.ru/maps/?rtext=~61.79165,34.367535&amp;rtt=auto">Маршрут</a></dd></div></dl></div>
+<div class="map reveal"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=34.361534999999996,61.78865,34.373535,61.79465&amp;layer=mapnik&amp;marker=61.79165,34.367535" title="Карта" loading="lazy"></iframe></div>
+</div></section>
+
+<section class="final"><div class="wrap reveal"><h2>Ждём вас</h2><p>проспект Ленина, 10</p><div class="hero-cta"><a class="btn" href="tel:+78142764755">Позвонить</a><a class="btn glass" href="https://wa.me/79114119167">WhatsApp</a></div></div></section>
+
+<footer class="site"><div class="wrap"><span>© Cafe 70`s</span><span>Демо-версия сайта · подготовил Евгений</span></div></footer>
+<div class="bar"><a class="btn" href="tel:+78142764755">Позвонить</a><a class="btn glass" href="https://wa.me/79114119167">WhatsApp</a></div>
+<script>(function(){var d=document,de=d.documentElement;de.classList.add('js');var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var nav=d.querySelector('.nav'),media=d.querySelector('.hero-media'),bar=d.querySelector('.bar'),hero=d.querySelector('.hero');
+function tick(){var y=window.scrollY||0;if(nav)nav.classList.toggle('solid',y>30);if(bar)bar.classList.toggle('show',y>(hero?hero.offsetHeight*0.55:0));
+if(!reduce&&media&&y<innerHeight*1.3)media.style.transform='translate3d(0,'+(y*0.35)+'px,0)';
+if(!reduce)d.querySelectorAll('[data-speed]').forEach(function(el){var r=el.parentElement.getBoundingClientRect();el.style.transform='translate3d(0,'+((r.top+r.height/2-innerHeight/2)*-parseFloat(el.getAttribute('data-speed')))+'px,0) scale(1.18)';});}
+var raf=0;addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(function(){raf=0;tick();});},{passive:true});addEventListener('resize',tick);tick();
+var slides=[].slice.call(d.querySelectorAll('.slide')),dots=[].slice.call(d.querySelectorAll('.dot')),i=0,t;
+function show(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('on',k===i);});dots.forEach(function(b,k){b.classList.toggle('on',k===i);});}
+function play(){clearInterval(t);if(!reduce&&slides.length>1)t=setInterval(function(){show(i+1);},6000);}
+dots.forEach(function(b,k){b.addEventListener('click',function(){show(k);play();});});
+d.querySelectorAll('[data-hero]').forEach(function(b){b.addEventListener('click',function(){show(i+(+b.getAttribute('data-hero')));play();});});
+var sx=null;if(hero){hero.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});hero.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50){show(i+(dx<0?1:-1));play();}sx=null;});}
+play();
+d.querySelectorAll('[data-track]').forEach(function(b){b.addEventListener('click',function(){var tr=d.getElementById(b.getAttribute('data-track'));if(tr)tr.scrollBy({left:(+b.getAttribute('data-dir'))*tr.clientWidth*0.8,behavior:'smooth'});});});
+var items=d.querySelectorAll('.reveal');if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});items.forEach(function(el){io.observe(el);});}else items.forEach(function(el){el.classList.add('in');});})();</script>
+</body>
+</html>
